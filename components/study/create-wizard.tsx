@@ -42,7 +42,7 @@ export function CreateWizard({ onNavigate }: { onNavigate: (s: Screen) => void }
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
-      const url = URL.URL.createObjectURL(file)
+      const url = URL.createObjectURL(file)
       setUploadedImage(url)
     }
   }
